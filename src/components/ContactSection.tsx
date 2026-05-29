@@ -5,15 +5,15 @@ import Image from "next/image";
 import { images } from "@/data/images";
 
 const details = [
-  { icon: "☎", label: "Phone", lines: ["+91 8638684096"] },
-  { icon: "✉", label: "Email", lines: ["mysticaura.fashion@gmail.com"] },
+  { icon: "PH", label: "Phone", lines: ["+91 8638684096"] },
+  { icon: "EM", label: "Email", lines: ["mysticaura.fashion@gmail.com"] },
   {
-    icon: "⌖",
+    icon: "AD",
     label: "Office Address",
     lines: ["Brindaban Path, House No. 2", "Hatigaon, Guwahati-38, Assam"],
   },
   {
-    icon: "◷",
+    icon: "HR",
     label: "Working Hours",
     lines: ["Monday - Friday", "10:00 AM - 6:00 PM IST"],
   },
@@ -50,7 +50,7 @@ export function ContactSection() {
 
   return (
     <>
-      <section className="container-shell pt-10 text-center md:pt-16">
+      <section className="container-shell pt-8 text-center md:pt-14">
         <h1 className="font-editorial text-6xl leading-none text-[var(--burgundy)] md:text-7xl lg:text-8xl">
           Contact Us
         </h1>
@@ -59,20 +59,20 @@ export function ContactSection() {
         </p>
         <div className="gold-diamond" />
       </section>
-      <section className="container-shell grid gap-10 pb-12 pt-4 lg:grid-cols-[1.05fr_1fr_1.05fr] lg:items-start">
+      <section className="container-shell grid gap-10 pb-12 pt-4 lg:grid-cols-[0.95fr_0.9fr_0.95fr] lg:items-start lg:gap-12">
         <div className="overflow-hidden bg-[var(--cream)]">
           <Image
             src={images.contact}
             alt="Editorial portrait for Mystic Aura contact"
             width={900}
             height={1100}
-            className="image-luxury aspect-[0.82] w-full object-cover"
+            className="image-luxury aspect-[0.78] w-full object-cover"
           />
         </div>
-        <div className="space-y-9 lg:pt-8">
+        <div className="space-y-10 lg:pt-10">
           {details.map((detail) => (
             <div key={detail.label} className="grid grid-cols-[52px_1fr] gap-5">
-              <div className="grid size-12 place-items-center rounded-full bg-[var(--gold)] text-lg text-white">
+              <div className="grid size-12 place-items-center rounded-full bg-[var(--gold)] text-[0.62rem] font-black tracking-[0.12em] text-white">
                 <span aria-hidden="true">{detail.icon}</span>
               </div>
               <div>
@@ -90,7 +90,7 @@ export function ContactSection() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="border-t hairline pt-6 lg:border-l lg:border-t-0 lg:pl-14 lg:pt-0"
+          className="border-t hairline pt-6 lg:border-l lg:border-t-0 lg:pl-14 lg:pt-7"
         >
           <div className="grid gap-5">
             {[
@@ -153,10 +153,10 @@ export function ContactSection() {
           </div>
         </form>
       </section>
-      <section className="map-grid relative min-h-56 border-y hairline">
+      <section className="map-grid relative min-h-56 border-y hairline md:min-h-60">
         <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 text-center">
-          <div className="mx-auto grid size-14 place-items-center rounded-full bg-[var(--gold)] text-3xl text-white">
-            ⌖
+          <div className="mx-auto grid size-14 place-items-center rounded-full bg-[var(--gold)] text-sm font-black tracking-[0.12em] text-white">
+            MA
           </div>
           <p className="font-editorial mt-3 text-3xl text-[var(--bronze)]">Guwahati</p>
         </div>

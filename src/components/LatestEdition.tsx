@@ -6,9 +6,9 @@ export function LatestEdition() {
   const latest = editions[0];
 
   return (
-    <section className="container-shell border-y hairline py-10">
-      <div className="grid items-center gap-8 md:grid-cols-[220px_1fr_260px] lg:grid-cols-[260px_1fr_300px]">
-        <div className="mx-auto w-52 overflow-hidden rounded-sm border hairline bg-[var(--cream)] md:w-full">
+    <section className="container-shell border-y hairline py-10 md:py-12">
+      <div className="grid items-center gap-9 md:grid-cols-[230px_1fr_270px] lg:grid-cols-[280px_1fr_310px]">
+        <div className="cover-frame mx-auto w-52 md:w-full">
           <Image
             src={latest.image}
             alt={`${latest.title} magazine cover`}
@@ -16,6 +16,19 @@ export function LatestEdition() {
             height={900}
             className="image-luxury aspect-[0.78] w-full"
           />
+          <div className="cover-masthead">Mystic Aura</div>
+          <div className="cover-kicker">
+            Fashion
+            <br />
+            Culture
+            <br />
+            Lifestyle
+          </div>
+          <div className="cover-issue">
+            {latest.issue}
+            <br />
+            {latest.date}
+          </div>
         </div>
         <div>
           <h2 className="font-editorial text-5xl leading-none text-[var(--burgundy)]">
@@ -25,7 +38,7 @@ export function LatestEdition() {
             Discover stories that shape culture, fashion, and lifestyle.
           </p>
           <Link href="/releases" className="magazine-link mt-8">
-            Read Edition <span aria-hidden="true">→</span>
+            Read Edition <span aria-hidden="true">-&gt;</span>
           </Link>
         </div>
         <div className="md:border-l md:border-[var(--line)] md:pl-10">

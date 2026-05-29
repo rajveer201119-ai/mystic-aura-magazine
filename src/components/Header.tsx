@@ -18,8 +18,8 @@ export function Header() {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b hairline bg-[rgba(255,250,240,0.92)] backdrop-blur-xl">
-      <div className="container-shell flex min-h-24 items-center justify-between gap-6 py-5">
+    <header className="sticky top-0 z-50 bg-[rgba(255,250,244,0.94)] backdrop-blur-xl">
+      <div className="container-shell flex min-h-24 items-center justify-between gap-6 border-b hairline py-5">
         <BrandLogo />
         <div className="hidden items-center gap-12 lg:flex">
           <nav aria-label="Primary navigation" className="flex items-center gap-10">
@@ -30,13 +30,13 @@ export function Header() {
                 <Link
                   key={item.href}
                   href={item.href}
-                  className={`focus-ring relative py-2 text-sm font-semibold transition hover:text-[var(--burgundy)] ${
+                  className={`focus-ring relative py-2 text-[0.78rem] font-bold uppercase tracking-[0.1em] transition hover:text-[var(--burgundy)] ${
                     active ? "text-[var(--burgundy)]" : "text-[var(--charcoal)]"
                   }`}
                 >
                   {item.label}
                   {active ? (
-                    <span className="absolute inset-x-1 -bottom-1 h-px bg-[var(--gold)]" />
+                    <span className="absolute inset-x-1 -bottom-1 h-0.5 bg-[var(--gold)]" />
                   ) : null}
                 </Link>
               );

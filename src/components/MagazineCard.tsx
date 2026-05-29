@@ -3,8 +3,8 @@ import type { Edition } from "@/data/editions";
 
 export function MagazineCard({ edition }: { edition: Edition }) {
   return (
-    <article className="group">
-      <div className="overflow-hidden rounded-sm bg-[var(--cream)]">
+    <article className="group mx-auto w-full max-w-[285px]">
+      <div className="cover-frame">
         <Image
           src={edition.image}
           alt={`${edition.title} magazine cover`}
@@ -12,9 +12,24 @@ export function MagazineCard({ edition }: { edition: Edition }) {
           height={900}
           className="image-luxury aspect-[0.78] w-full transition duration-500 group-hover:scale-105"
         />
+        <div className="cover-masthead">Mystic Aura</div>
+        <div className="cover-kicker">
+          Fashion
+          <br />
+          Culture
+          <br />
+          Beauty
+          <br />
+          Living
+        </div>
+        <div className="cover-issue">
+          {edition.title}
+          <br />
+          {edition.date}
+        </div>
       </div>
       <p className="mt-4 text-xs font-semibold text-[var(--gold)]">{edition.issue}</p>
-      <h2 className="font-editorial mt-1 text-3xl leading-none text-[var(--charcoal)]">
+      <h2 className="font-editorial mt-1 text-[1.75rem] leading-none text-[var(--charcoal)]">
         {edition.title}
       </h2>
       <p className="mt-2 text-sm font-bold text-[var(--charcoal)]">{edition.date}</p>
@@ -22,7 +37,7 @@ export function MagazineCard({ edition }: { edition: Edition }) {
         {edition.description}
       </p>
       <a href="#" className="magazine-link mt-5">
-        Read Edition <span aria-hidden="true">→</span>
+        Read Edition <span aria-hidden="true">-&gt;</span>
       </a>
     </article>
   );

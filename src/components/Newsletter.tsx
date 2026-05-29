@@ -18,14 +18,12 @@ export function Newsletter({ floral = false }: { floral?: boolean }) {
   }
 
   return (
-    <section
-      id="newsletter"
-      className="border-y hairline bg-[linear-gradient(90deg,#f9e8df,#fff7ed)]"
-    >
-      <div className="container-shell relative grid gap-6 py-7 md:grid-cols-[1fr_1.35fr] md:items-center">
+    <section id="newsletter" className="border-y hairline bg-transparent">
+      <div className="container-shell py-5">
+        <div className="relative grid gap-6 rounded-md border border-[rgba(185,133,52,0.18)] bg-[linear-gradient(90deg,#f8e6dd,#fff6ec)] px-6 py-6 md:grid-cols-[1fr_1.35fr] md:items-center md:px-14">
         {floral ? (
-          <div className="pointer-events-none absolute right-0 top-4 hidden text-7xl text-[rgba(185,133,52,0.16)] lg:block">
-            ✧
+          <div className="pointer-events-none absolute right-8 top-4 hidden text-7xl text-[rgba(185,133,52,0.16)] lg:block">
+            *
           </div>
         ) : null}
         <div>
@@ -61,6 +59,7 @@ export function Newsletter({ floral = false }: { floral?: boolean }) {
             </p>
           ) : null}
         </form>
+        </div>
       </div>
     </section>
   );

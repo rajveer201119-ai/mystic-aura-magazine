@@ -18,7 +18,7 @@ export function CategoryCard({
           className="image-luxury aspect-[1.8] w-full transition duration-500 group-hover:scale-105"
         />
       </div>
-      <h3 className="mt-3 text-xs font-extrabold uppercase tracking-[0.12em] text-[var(--charcoal)]">
+      <h3 className="mt-3 text-[0.68rem] font-extrabold uppercase tracking-[0.13em] text-[var(--charcoal)]">
         {name}
       </h3>
     </article>

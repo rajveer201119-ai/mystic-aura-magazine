@@ -4,7 +4,7 @@ import { team } from "@/data/team";
 export function TeamSection({ compact = false }: { compact?: boolean }) {
   return (
     <section
-      className={`bg-[linear-gradient(105deg,#bfe8e3_0%,#eff0d8_48%,#ffe0a6_100%)] ${
+      className={`bg-[linear-gradient(105deg,#b8e4df_0%,#eef0d8_48%,#ffe1a9_100%)] ${
         compact ? "py-10 md:py-14" : "py-14 md:py-20"
       }`}
     >
@@ -16,15 +16,15 @@ export function TeamSection({ compact = false }: { compact?: boolean }) {
           <div className="gold-diamond" />
           <p className="text-sm text-[var(--muted)]">Passion. Purpose. Presence.</p>
         </div>
-        <div className="mt-12 grid gap-10 lg:grid-cols-2 lg:gap-0">
+        <div className="mt-12 grid gap-12 lg:grid-cols-2 lg:gap-0">
           {team.map((member, index) => (
             <article
               key={member.name}
-              className={`grid gap-7 md:grid-cols-[210px_1fr] md:items-center lg:px-12 ${
+              className={`grid gap-8 md:grid-cols-[220px_1fr] md:items-center lg:px-12 ${
                 index === 1 ? "lg:border-l lg:border-[var(--line)]" : ""
               }`}
             >
-              <div className="mx-auto size-56 overflow-hidden rounded-full border-2 border-[var(--gold)] bg-[var(--cream)] p-1">
+              <div className="mx-auto size-56 overflow-hidden rounded-full border-2 border-[var(--gold)] bg-[var(--cream)] p-1 shadow-[0_0_0_8px_rgba(255,250,244,0.34)]">
                 <Image
                   src={member.image}
                   alt={`${member.name} portrait`}

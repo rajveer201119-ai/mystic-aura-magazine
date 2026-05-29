@@ -1,17 +1,18 @@
 @import "tailwindcss";
 
 :root {
-  --ivory: #fffaf0;
-  --cream: #f7ecdc;
-  --blush: #f8e7df;
+  --ivory: #fffaf4;
+  --cream: #f6ead9;
+  --blush: #f8e5dc;
   --peach: #efd7c5;
-  --burgundy: #7a0f1c;
-  --burgundy-dark: #5b0711;
-  --gold: #b98534;
+  --burgundy: #76111c;
+  --burgundy-dark: #4f0610;
+  --gold: #b7832f;
   --bronze: #9a7135;
   --charcoal: #241d18;
   --muted: #75695d;
   --line: rgba(185, 133, 52, 0.42);
+  --line-strong: rgba(185, 133, 52, 0.68);
 }
 
 * {
@@ -25,10 +26,13 @@ html {
 body {
   margin: 0;
   background:
-    radial-gradient(circle at 20% 0%, rgba(248, 231, 223, 0.55), transparent 32rem),
+    radial-gradient(circle at 14% 6%, rgba(248, 229, 220, 0.55), transparent 30rem),
+    radial-gradient(circle at 88% 22%, rgba(246, 234, 217, 0.72), transparent 34rem),
     linear-gradient(180deg, var(--ivory), #fffdf8 48%, var(--ivory));
   color: var(--charcoal);
-  font-family: "Montserrat", "Inter", "Segoe UI", Arial, sans-serif;
+  font-family: "Montserrat", "Inter", "Avenir Next", "Segoe UI", Arial, sans-serif;
+  font-size: 15px;
+  line-height: 1.6;
 }
 
 a {
@@ -48,7 +52,8 @@ img {
 }
 
 .font-editorial {
-  font-family: "Cormorant Garamond", "Playfair Display", Georgia, "Times New Roman", serif;
+  font-family: Didot, "Bodoni 72", "Bodoni MT", "Cormorant Garamond", "Playfair Display", Georgia, "Times New Roman", serif;
+  letter-spacing: -0.012em;
 }
 
 .font-logo {
@@ -57,7 +62,7 @@ img {
 }
 
 .container-shell {
-  width: min(100% - 2rem, 1180px);
+  width: min(100% - 2.5rem, 1240px);
   margin-inline: auto;
 }
 
@@ -69,8 +74,8 @@ img {
   position: relative;
   width: min(290px, 62vw);
   height: 1px;
-  background: var(--line);
-  margin: 1rem auto;
+  background: var(--line-strong);
+  margin: 1.05rem auto;
 }
 
 .gold-diamond::after {
@@ -95,9 +100,9 @@ img {
   gap: 0.65rem;
   border-bottom: 1px solid var(--gold);
   padding-bottom: 0.22rem;
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 800;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   transition: color 180ms ease, gap 180ms ease;
 }
@@ -139,16 +144,83 @@ img {
 .image-luxury {
   background: var(--cream);
   object-fit: cover;
-  filter: saturate(0.86) sepia(0.07) contrast(0.96);
+  filter: saturate(0.82) sepia(0.08) contrast(0.98);
+}
+
+.cover-frame {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(185, 133, 52, 0.28);
+  background: var(--cream);
+}
+
+.cover-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0, 0, 0, 0.38), transparent 24%, transparent 63%, rgba(0, 0, 0, 0.18)),
+    radial-gradient(circle at 50% 18%, transparent 0, rgba(255, 250, 240, 0.08) 34%, transparent 68%);
+  pointer-events: none;
+}
+
+.cover-masthead {
+  position: absolute;
+  left: 50%;
+  top: 1.15rem;
+  z-index: 2;
+  width: 86%;
+  transform: translateX(-50%);
+  color: rgba(255, 250, 240, 0.92);
+  font-family: Didot, "Bodoni 72", Georgia, serif;
+  font-size: clamp(1.35rem, 4vw, 2.25rem);
+  line-height: 1;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.cover-kicker {
+  position: absolute;
+  left: 1rem;
+  top: 31%;
+  z-index: 2;
+  max-width: 34%;
+  color: rgba(255, 250, 240, 0.82);
+  font-family: Georgia, serif;
+  font-size: 0.52rem;
+  letter-spacing: 0.13em;
+  line-height: 1.5;
+  text-transform: uppercase;
+}
+
+.cover-issue {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  z-index: 2;
+  color: rgba(255, 250, 240, 0.82);
+  font-size: 0.5rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-align: right;
+  text-transform: uppercase;
+}
+
+.section-title-row {
+  border-top: 1px solid var(--line);
+  padding-top: 1.35rem;
 }
 
 .map-grid {
   background:
     linear-gradient(90deg, rgba(185, 133, 52, 0.08) 1px, transparent 1px),
     linear-gradient(0deg, rgba(185, 133, 52, 0.08) 1px, transparent 1px),
+    linear-gradient(28deg, transparent 48%, rgba(189, 129, 118, 0.23) 49%, rgba(189, 129, 118, 0.23) 51%, transparent 52%),
+    linear-gradient(145deg, transparent 47%, rgba(185, 133, 52, 0.18) 48%, rgba(185, 133, 52, 0.18) 50%, transparent 51%),
     radial-gradient(circle at 24% 48%, rgba(122, 15, 28, 0.12), transparent 18rem),
     #f7efe5;
-  background-size: 58px 58px, 58px 58px, auto, auto;
+  background-size: 58px 58px, 58px 58px, 380px 180px, 520px 220px, auto, auto;
 }
 
 @media (max-width: 720px) {

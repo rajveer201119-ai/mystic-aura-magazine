@@ -17,7 +17,7 @@ export function ReleasesGrid() {
   return (
     <section className="container-shell py-10 md:py-14">
       <div
-        className="mb-8 flex gap-7 overflow-x-auto border-b hairline pb-4 md:gap-14"
+        className="mb-9 flex gap-7 overflow-x-auto border-b hairline pb-4 md:gap-14"
         aria-label="Filter editions by year"
       >
         {releaseYears.map((year) => {
@@ -41,7 +41,7 @@ export function ReleasesGrid() {
         })}
       </div>
       {filtered.length ? (
-        <div className="grid gap-x-24 gap-y-12 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-x-20 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((edition) => (
             <MagazineCard key={edition.issue} edition={edition} />
           ))}
