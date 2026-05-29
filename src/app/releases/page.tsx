@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { Newsletter } from "@/components/Newsletter";
 import { ReleasesGrid } from "@/components/ReleasesGrid";
 
@@ -23,7 +24,15 @@ export default function ReleasesPage() {
           Explore our past issues and timeless stories.
         </p>
       </section>
-      <ReleasesGrid />
+      <Suspense
+        fallback={
+          <section className="container-shell py-14 text-center text-[var(--muted)]">
+            Loading editions...
+          </section>
+        }
+      >
+        <ReleasesGrid />
+      </Suspense>
       <Newsletter />
     </>
   );

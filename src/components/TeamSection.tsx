@@ -30,7 +30,11 @@ export function TeamSection({ compact = false }: { compact?: boolean }) {
                   alt={`${member.name} portrait`}
                   width={700}
                   height={700}
-                  className="image-luxury size-full rounded-full object-cover"
+                  className={`size-full rounded-full bg-[var(--cream)] ${
+                    index === 0
+                      ? "object-contain p-2"
+                      : "image-luxury object-cover object-center"
+                  }`}
                 />
               </div>
               <div>

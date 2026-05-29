@@ -1,17 +1,50 @@
 "use client";
 
+import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useMemo, useState } from "react";
 import { editions, releaseYears } from "@/data/editions";
 import { MagazineCard } from "@/components/MagazineCard";
 
+const categoryLabels: Record<string, string> = {
+  fashion: "Fashion",
+  beauty: "Beauty",
+  culture: "Culture",
+  lifestyle: "Lifestyle",
+  interviews: "Interviews",
+};
+
+function matchesCategory(
+  edition: (typeof editions)[number],
+  category: string | null,
+) {
+  if (!category) {
+    return true;
+  }
+
+  const text = `${edition.title} ${edition.description} ${edition.issue}`.toLowerCase();
+  const terms: Record<string, RegExp> = {
+    fashion: /fashion|style|trend|chic|elegance|divas|regal|grace|radiance/,
+    beauty: /beauty|looks|love|natural|radiance|grace|purity/,
+    culture: /culture|festival|heritage|children|northeast|zubeen|artist/,
+    lifestyle: /lifestyle|health|mindset|summer|winter|new year|pure soul|living/,
+    interviews: /zubeen|artist|women|divas|empowered|northeast/,
+  };
+
+  return terms[category]?.test(text) ?? true;
+}
+
 export function ReleasesGrid() {
+  const searchParams = useSearchParams();
+  const activeCategory = searchParams.get("category");
   const [activeYear, setActiveYear] = useState("ALL");
   const filtered = useMemo(
     () =>
-      activeYear === "ALL"
-        ? editions
-        : editions.filter((edition) => edition.year === activeYear),
-    [activeYear],
+      editions.filter((edition) => {
+        const yearMatches = activeYear === "ALL" || edition.year === activeYear;
+        return yearMatches && matchesCategory(edition, activeCategory);
+      }),
+    [activeYear, activeCategory],
   );
 
   return (
@@ -40,6 +73,16 @@ export function ReleasesGrid() {
           );
         })}
       </div>
+      {activeCategory && categoryLabels[activeCategory] ? (
+        <div className="mb-8 flex flex-wrap items-center justify-between gap-3 border-b hairline pb-4">
+          <p className="text-sm font-semibold text-[var(--muted)]">
+            Showing {categoryLabels[activeCategory]} editions
+          </p>
+          <Link href="/releases" className="magazine-link">
+            All releases <span aria-hidden="true">-&gt;</span>
+          </Link>
+        </div>
+      ) : null}
       {filtered.length ? (
         <div className="grid gap-x-20 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
           {filtered.map((edition) => (

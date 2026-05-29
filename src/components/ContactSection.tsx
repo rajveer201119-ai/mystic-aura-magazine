@@ -57,7 +57,10 @@ export function ContactSection() {
         </p>
         <div className="gold-diamond" />
       </section>
-      <section className="container-shell grid gap-10 pb-12 pt-4 lg:grid-cols-[0.92fr_1.08fr] lg:items-start lg:gap-16">
+      <section
+        id="contact-form"
+        className="container-shell grid gap-10 pb-12 pt-4 lg:grid-cols-[0.92fr_1.08fr] lg:items-start lg:gap-16"
+      >
         <div className="space-y-10 rounded-md border hairline bg-[rgba(247,236,220,0.28)] p-7 md:p-9">
           {details.map((detail) => (
             <div key={detail.label} className="grid grid-cols-[52px_1fr] gap-5">

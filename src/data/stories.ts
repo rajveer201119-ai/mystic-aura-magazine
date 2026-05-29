@@ -46,25 +46,30 @@ export const categories = [
     name: "Fashion",
     image:
       "https://mysticauramag.com/wp-content/uploads/2026/03/March-Edition-page-1.jpg-scaled.jpeg",
+    href: "/releases?category=fashion",
   },
   {
     name: "Beauty",
     image:
       "https://mysticauramag.com/wp-content/uploads/2025/07/July-Edition-1-1-scaled.jpg",
+    href: "/releases?category=beauty",
   },
   {
     name: "Culture",
     image:
       "https://mysticauramag.com/wp-content/uploads/2024/10/Oct-Edition-page-1-2-scaled.jpg",
+    href: "/releases?category=culture",
   },
   {
     name: "Lifestyle",
     image:
       "https://mysticauramag.com/wp-content/uploads/2025/08/August-Edition-page-1-scaled.jpg",
+    href: "/releases?category=lifestyle",
   },
   {
     name: "Interviews",
     image:
       "https://mysticauramag.com/wp-content/uploads/2025/10/October-Edition-page-1-scaled.jpg",
+    href: "/releases?category=interviews",
   },
 ];
