@@ -1,6 +1,6 @@
 export const images = {
   hero:
-    "https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1800&q=88",
+    "https://mysticauramag.com/wp-content/uploads/2026/05/May-Edition-Page-1.jpg-scaled.jpeg",
   contact:
-    "https://images.unsplash.com/photo-1509967419530-da38b4704bc6?auto=format&fit=crop&w=900&q=86",
+    "https://mysticauramag.com/wp-content/uploads/2021/04/5cea8542-ef2a-428e-8ce6-4958f9327d12-1.jpeg?w=668",
 };

@@ -3,36 +3,41 @@ export type Story = {
   title: string;
   readingTime: string;
   image: string;
+  href: string;
 };
 
 export const stories: Story[] = [
   {
     category: "Fashion",
-    title: "The New Language of Identity",
+    title: "Royal Radiance",
     readingTime: "6 min read",
     image:
-      "https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?auto=format&fit=crop&w=800&q=86",
+      "https://mysticauramag.com/wp-content/uploads/2025/12/December-Edition-page-1-scaled.jpg",
+    href: "https://mysticauramag.com/wp-content/uploads/2025/12/December-Edition-page.pdf",
   },
   {
     category: "Culture",
-    title: "Rooted in Tradition, Rising in the World",
+    title: "Pure Soul",
     readingTime: "6 min read",
     image:
-      "https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=800&q=86",
+      "https://mysticauramag.com/wp-content/uploads/2025/11/November-Edition-page-1-scaled.jpg",
+    href: "https://mysticauramag.com/wp-content/uploads/2025/11/November-Edition-page.pdf",
   },
   {
     category: "Lifestyle",
-    title: "Slow Living in a Fast World",
+    title: "Fashion Is Lifestyle",
     readingTime: "7 min read",
     image:
-      "https://images.unsplash.com/photo-1529139574466-a303027c1d8b?auto=format&fit=crop&w=800&q=86",
+      "https://mysticauramag.com/wp-content/uploads/2025/09/Sept-Edition-page-1-scaled.jpg",
+    href: "https://mysticauramag.com/wp-content/uploads/2025/09/Sept-Edition-page.pdf",
   },
   {
     category: "Interviews",
-    title: "A Conversation with Arjun Saluja",
+    title: "Legends Never Truly Die",
     readingTime: "5 min read",
     image:
-      "https://images.unsplash.com/photo-1520975682031-aef53ba0f53b?auto=format&fit=crop&w=800&q=86",
+      "https://mysticauramag.com/wp-content/uploads/2025/10/October-Edition-page-1-scaled.jpg",
+    href: "https://mysticauramag.com/wp-content/uploads/2025/10/October-Edition-page.pdf",
   },
 ];
 
@@ -40,26 +45,26 @@ export const categories = [
   {
     name: "Fashion",
     image:
-      "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=86",
+      "https://mysticauramag.com/wp-content/uploads/2026/03/March-Edition-page-1.jpg-scaled.jpeg",
   },
   {
     name: "Beauty",
     image:
-      "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?auto=format&fit=crop&w=800&q=86",
+      "https://mysticauramag.com/wp-content/uploads/2025/07/July-Edition-1-1-scaled.jpg",
   },
   {
     name: "Culture",
     image:
-      "https://images.unsplash.com/photo-1512316609839-ce289d3eba0a?auto=format&fit=crop&w=800&q=86",
+      "https://mysticauramag.com/wp-content/uploads/2024/10/Oct-Edition-page-1-2-scaled.jpg",
   },
   {
     name: "Lifestyle",
     image:
-      "https://images.unsplash.com/photo-1496747611176-843222e1e57c?auto=format&fit=crop&w=800&q=86",
+      "https://mysticauramag.com/wp-content/uploads/2025/08/August-Edition-page-1-scaled.jpg",
   },
   {
     name: "Interviews",
     image:
-      "https://images.unsplash.com/photo-1508214751196-bcfd4ca60f91?auto=format&fit=crop&w=800&q=86",
+      "https://mysticauramag.com/wp-content/uploads/2025/10/October-Edition-page-1-scaled.jpg",
   },
 ];

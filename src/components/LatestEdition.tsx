@@ -37,7 +37,7 @@ export function LatestEdition() {
           <p className="mt-5 max-w-sm leading-7 text-[var(--charcoal)]">
             Discover stories that shape culture, fashion, and lifestyle.
           </p>
-          <Link href="/releases" className="magazine-link mt-8">
+          <Link href={latest.pdf} target="_blank" className="magazine-link mt-8">
             Read Edition <span aria-hidden="true">-&gt;</span>
           </Link>
         </div>

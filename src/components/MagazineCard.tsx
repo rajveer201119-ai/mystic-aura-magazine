@@ -36,7 +36,12 @@ export function MagazineCard({ edition }: { edition: Edition }) {
       <p className="mt-4 max-w-sm text-sm leading-6 text-[var(--charcoal)]">
         {edition.description}
       </p>
-      <a href="#" className="magazine-link mt-5">
+      <a
+        href={edition.pdf}
+        target="_blank"
+        rel="noreferrer"
+        className="magazine-link mt-5"
+      >
         Read Edition <span aria-hidden="true">-&gt;</span>
       </a>
     </article>
