@@ -154,59 +154,6 @@ img {
   background: var(--cream);
 }
 
-.cover-frame::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(180deg, rgba(0, 0, 0, 0.38), transparent 24%, transparent 63%, rgba(0, 0, 0, 0.18)),
-    radial-gradient(circle at 50% 18%, transparent 0, rgba(255, 250, 240, 0.08) 34%, transparent 68%);
-  pointer-events: none;
-}
-
-.cover-masthead {
-  position: absolute;
-  left: 50%;
-  top: 1.15rem;
-  z-index: 2;
-  width: 86%;
-  transform: translateX(-50%);
-  color: rgba(255, 250, 240, 0.92);
-  font-family: Didot, "Bodoni 72", Georgia, serif;
-  font-size: clamp(1.35rem, 4vw, 2.25rem);
-  line-height: 1;
-  text-align: center;
-  letter-spacing: 0.03em;
-  text-transform: uppercase;
-}
-
-.cover-kicker {
-  position: absolute;
-  left: 1rem;
-  top: 31%;
-  z-index: 2;
-  max-width: 34%;
-  color: rgba(255, 250, 240, 0.82);
-  font-family: Georgia, serif;
-  font-size: 0.52rem;
-  letter-spacing: 0.13em;
-  line-height: 1.5;
-  text-transform: uppercase;
-}
-
-.cover-issue {
-  position: absolute;
-  bottom: 1rem;
-  right: 1rem;
-  z-index: 2;
-  color: rgba(255, 250, 240, 0.82);
-  font-size: 0.5rem;
-  font-weight: 700;
-  letter-spacing: 0.14em;
-  text-align: right;
-  text-transform: uppercase;
-}
-
 .section-title-row {
   border-top: 1px solid var(--line);
   padding-top: 1.35rem;

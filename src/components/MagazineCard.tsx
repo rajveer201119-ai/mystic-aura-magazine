@@ -12,21 +12,6 @@ export function MagazineCard({ edition }: { edition: Edition }) {
           height={900}
           className="image-luxury aspect-[0.78] w-full transition duration-500 group-hover:scale-105"
         />
-        <div className="cover-masthead">Mystic Aura</div>
-        <div className="cover-kicker">
-          Fashion
-          <br />
-          Culture
-          <br />
-          Beauty
-          <br />
-          Living
-        </div>
-        <div className="cover-issue">
-          {edition.title}
-          <br />
-          {edition.date}
-        </div>
       </div>
       <p className="mt-4 text-xs font-semibold text-[var(--gold)]">{edition.issue}</p>
       <h2 className="font-editorial mt-1 text-[1.75rem] leading-none text-[var(--charcoal)]">

@@ -462,4 +462,9 @@ export const editions: Edition[] = [
   },
 ];
 
-export const releaseYears = ["ALL", "2026", "2025", "2024", "2023", "2022", "2021", "2020"];
+export const releaseYears = [
+  "ALL",
+  ...Array.from(new Set(editions.map((edition) => edition.year))).sort(
+    (a, b) => Number(b) - Number(a),
+  ),
+];

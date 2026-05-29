@@ -16,19 +16,6 @@ export function LatestEdition() {
             height={900}
             className="image-luxury aspect-[0.78] w-full"
           />
-          <div className="cover-masthead">Mystic Aura</div>
-          <div className="cover-kicker">
-            Fashion
-            <br />
-            Culture
-            <br />
-            Lifestyle
-          </div>
-          <div className="cover-issue">
-            {latest.issue}
-            <br />
-            {latest.date}
-          </div>
         </div>
         <div>
           <h2 className="font-editorial text-5xl leading-none text-[var(--burgundy)]">

@@ -16,8 +16,6 @@ const columns = [
     title: "Information",
     links: [
       { label: "About Us", href: "/team" },
-      { label: "Privacy Policy", href: "/" },
-      { label: "Terms & Conditions", href: "/" },
     ],
   },
   {

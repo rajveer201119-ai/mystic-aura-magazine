@@ -1,8 +1,6 @@
 "use client";
 
 import { FormEvent, useState } from "react";
-import Image from "next/image";
-import { images } from "@/data/images";
 
 const details = [
   { icon: "PH", label: "Phone", lines: ["+91 8638684096"] },
@@ -59,17 +57,8 @@ export function ContactSection() {
         </p>
         <div className="gold-diamond" />
       </section>
-      <section className="container-shell grid gap-10 pb-12 pt-4 lg:grid-cols-[0.95fr_0.9fr_0.95fr] lg:items-start lg:gap-12">
-        <div className="overflow-hidden bg-[var(--cream)]">
-          <Image
-            src={images.contact}
-            alt="Editorial portrait for Mystic Aura contact"
-            width={900}
-            height={1100}
-            className="image-luxury aspect-[0.78] w-full object-cover"
-          />
-        </div>
-        <div className="space-y-10 lg:pt-10">
+      <section className="container-shell grid gap-10 pb-12 pt-4 lg:grid-cols-[0.92fr_1.08fr] lg:items-start lg:gap-16">
+        <div className="space-y-10 rounded-md border hairline bg-[rgba(247,236,220,0.28)] p-7 md:p-9">
           {details.map((detail) => (
             <div key={detail.label} className="grid grid-cols-[52px_1fr] gap-5">
               <div className="grid size-12 place-items-center rounded-full bg-[var(--gold)] text-[0.62rem] font-black tracking-[0.12em] text-white">
@@ -90,7 +79,7 @@ export function ContactSection() {
         </div>
         <form
           onSubmit={handleSubmit}
-          className="border-t hairline pt-6 lg:border-l lg:border-t-0 lg:pl-14 lg:pt-7"
+          className="border-t hairline pt-6 lg:border-l lg:border-t-0 lg:pl-14 lg:pt-0"
         >
           <div className="grid gap-5">
             {[
